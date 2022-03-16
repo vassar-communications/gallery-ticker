@@ -1,0 +1,124 @@
+/*	Ticker styling
+	============== */
+
+.tt__ticker-container .carousel-cell {
+	text-align: center;
+	width: 100%;
+}
+
+
+
+/*	Gallery styling
+	=============== */
+
+.blocks-gallery-grid {
+  padding: 0;
+}
+
+.wp-block-gallery {
+  margin-bottom: 3em;
+}
+.wp-block-gallery .flickity-enabled {
+  display: block !important;
+}
+.wp-block-gallery .flickity-enabled .blocks-gallery-item {
+  display: block !important;
+  margin: 0;
+}
+.wp-block-gallery figcaption {
+  position: absolute;
+  bottom: 0;
+  z-index: 130;
+  left: 0;
+  background: black;
+  color: #fff;
+  min-height: 3rem;
+  padding: 1em;
+  padding-right: calc(100% - 56ch);
+  width: 100%;
+}
+
+.blocks-gallery-item {
+  height: 58vw;
+  /*
+  	@include break(large) {
+  		height: 38vw;
+  	}
+  */
+}
+.blocks-gallery-item figure {
+  height: 100%;
+  width: 100%;
+  padding-bottom: 3rem;
+}
+.wp-block-gallery img {
+  object-fit: contain !important;
+  height: 100%;
+}
+
+
+.blocks-gallery-item .blocks-gallery-item__caption a:link,
+.blocks-gallery-item .blocks-gallery-item__caption a:visited {
+  color: #aaa;
+  text-decoration-color: #aaa;
+}
+.blocks-gallery-item .blocks-gallery-item__caption a:link:hover,
+.blocks-gallery-item .blocks-gallery-item__caption a:visited:hover,
+.blocks-gallery-item .blocks-gallery-item__caption a:link:active,
+.blocks-gallery-item .blocks-gallery-item__caption a:visited:active {
+  background: #eee;
+  color: #000;
+  text-decoration: none;
+}
+
+
+.wp-block-gallery .wp-block-image {
+	background: #000;
+  width: 100% !important;
+    height: 100%;
+    margin: 0 !important;
+}
+
+.wp-block-gallery .flickity-viewport {
+    height: 30rem !important;
+    width: 100%;
+}
+
+.wp-block-gallery .flickity-viewport {
+    height: unset !important;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+}
+
+.wp-block-gallery figcaption {
+    background: rgba(0,0,0,0.8) !important;
+    height: fit-content !important;
+    min-height: auto !important;
+    padding: 0.4rem 1rem !important;
+    width: fit-content !important;
+}
+
+
+
+
+/* Fade CSS */
+
+.tt__ticker-container {
+  transform: none !important;
+}
+
+.tt__ticker-container .carousel-cell {
+  left: 0 !important;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out !important;
+  z-index: -1;
+  font-size: var(--tt-ticker-item-fontSize, 1.6rem);
+}
+.tt__ticker-container .flickity-button {
+	display: none;
+}
+.tt__ticker-container .carousel-cell.is-selected {
+
+  opacity: 1;
+  z-index: 0
+}
